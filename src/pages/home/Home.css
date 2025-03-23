@@ -50,3 +50,20 @@
 .category-card img{
     width: 100%;
 }
+
+.product-section{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.home h1{
+    text-align: center;
+    padding: 50px;
+    color: rgb(28,34,39);
+    font-size: 3vmax;
+}

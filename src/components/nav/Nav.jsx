@@ -3,15 +3,16 @@ import './Nav.css'
 import { FaShopify } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
-
+import {Link} from 'react-router-dom'
 const Nav = () => {
   return (
     <div className='nav'>
         <div className="top-nav">
-            <div className="logo">
+            <Link to='/'><div className="logo">
                 <span>ShopSphere</span>
                 <FaShopify/>
             </div>
+            </Link>
             <div className="search-box">
                 <input type="text" placeholder='Search Items...' />
                 <button><FaSearch /></button>
@@ -22,10 +23,10 @@ const Nav = () => {
             </div>
         </div>
         <div className="bottom-nav">
-            <li>Home</li>
-            <li>Shop</li>
-            <li>Cart</li>
-            <li>Contact</li>
+            <Link to='/'><li>Home</li></Link>
+            <Link to='/shop'><li>Shop</li></Link>
+            <Link to='/cart'><li>Cart</li></Link>
+            <Link to='/contact'><li>Contact</li></Link>
         </div>
     </div>
   )
