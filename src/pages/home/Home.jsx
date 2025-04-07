@@ -12,6 +12,7 @@ const Home = () => {
     const updateData = dummydata.filter((item)=>(item.category===category));
     setCate(updateData);
   }
+  
   return (
     <div className="home">
       <div className="hero-bg">

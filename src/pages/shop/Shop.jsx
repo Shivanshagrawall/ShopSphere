@@ -6,22 +6,23 @@ import Product from "../../components/Product/Product";
 import { FaShopify } from "react-icons/fa";
 
 const Shop = () => {
-    let [cate,setCate]=useState(dummydata);
-      function filterProducts(category){
-        if(category==='All'){
-            setCate(dummydata);
-        }else{
-          const updateData = dummydata.filter((item)=>(item.category===category));
-        setCate(updateData);  
-        }
-        
-      }
+  let [cate, setCate] = useState(dummydata);
+
+  function filterProducts(category) {
+    if (category === "All") {
+      setCate(dummydata);
+    } else {
+      const updateData = dummydata.filter((item) => item.category === category);
+      setCate(updateData);
+    }
+  }
+
   return (
     <div className="shop">
-        <div className="heading">
-            <span>Shop</span>
-            <FaShopify/>
-        </div>
+      <div className="heading">
+        <span>Shop</span>
+        <FaShopify />
+      </div>
       <div className="category-section">
         {category.map((item, id) => (
           <div
@@ -35,11 +36,16 @@ const Shop = () => {
         ))}
       </div>
 
-
       <div className="product-section">
-        {cate.map((item,idx)=>(
-          <Product key={idx} name={item.name} image={item.image} price={item.price} id={item.id}/>
-        ))} 
+        {cate.map((item, idx) => (
+          <Product
+            key={idx}
+            name={item.name}
+            image={item.image}
+            price={item.price}
+            id={item.id}
+          />
+        ))}
       </div>
     </div>
   );
